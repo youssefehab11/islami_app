@@ -17,7 +17,7 @@ class SurahTlawaBody extends StatelessWidget {
       textDirection: TextDirection.rtl,
       text: TextSpan(
         text: ayat[currentAya],
-        style: Theme.of(context).textTheme.titleSmall,
+        style: Theme.of(context).textTheme.bodySmall,
         children: [
           WidgetSpan(
             alignment: PlaceholderAlignment.middle,
@@ -33,7 +33,7 @@ class SurahTlawaBody extends StatelessWidget {
                   ayaArabicNum,
                   style: Theme.of(context)
                       .textTheme
-                      .titleSmall
+                      .bodySmall
                       ?.copyWith(fontSize: 18),
                 )
               ],

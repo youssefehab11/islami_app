@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
        initialRoute: Routes.splashRoute,
        routes: RoutesManager.router,
        theme: AppThemes.lightTheme,
+       darkTheme: AppThemes.darkThem,
+       themeMode: ThemeMode.light,
     );
   }
 
