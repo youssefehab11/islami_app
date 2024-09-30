@@ -16,9 +16,9 @@ class ZekrDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+        Text(
           StringsManager.tasbehatNumber,
-          style: TextStyle(fontSize: 25),
+          style: Theme.of(context).textTheme.titleSmall,
         ),
         const SizedBox(
           height: 34,
@@ -27,7 +27,10 @@ class ZekrDetails extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
-            color: Theme.of(context).primaryColor.withOpacity(0.57),
+            color: Theme.of(context)
+                .colorScheme
+                .primaryContainer
+                .withOpacity(0.57),
           ),
           child: Text(
             '$tasbehatNumber',

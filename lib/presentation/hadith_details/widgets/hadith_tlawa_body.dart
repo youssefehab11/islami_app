@@ -8,7 +8,7 @@ class HadithTlawaBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       hadithBody,
-      style: Theme.of(context).textTheme.titleSmall,
+      style: Theme.of(context).textTheme.bodySmall,
       textAlign: TextAlign.right,
     );
   }

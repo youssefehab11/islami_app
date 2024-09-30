@@ -9,7 +9,7 @@ class SurahTlawaHead extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       'سورة ${surahInfo.surahName}',
-      style: Theme.of(context).textTheme.titleMedium,
+      style: Theme.of(context).textTheme.bodyMedium,
     );
   }
 }
