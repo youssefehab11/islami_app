@@ -6,6 +6,9 @@ class AppThemes {
     primaryColor: const Color(0xFFB7935F),
     primaryColorLight: Colors.white,
     scaffoldBackgroundColor: Colors.transparent,
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Colors.white
+    ),
     //useMaterial3: false,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,

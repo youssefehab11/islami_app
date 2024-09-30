@@ -19,4 +19,12 @@ class StringsManager {
   static const String sebhaIconLabel = 'Sebha';
   static const String radioIconLabel = 'Radio';
   static const String settingsIconLabel = 'Settings';
+
+  //Sttings screen 
+  static const String themeTitle = 'Theme';
+  static const String lightOption = 'Light';
+  static const String darkOption = 'Dark';
+  static const String languageTitle = 'Language';
+  static const String englishOption = 'English';
+  static const String arabicOption = 'Arabic';
 }
