@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/core/utils/fonts_manager.dart';
 import 'package:islami_app/core/utils/strings_manager.dart';
 
 class ZekrDetails extends StatelessWidget {
@@ -18,7 +19,7 @@ class ZekrDetails extends StatelessWidget {
       children: [
         Text(
           StringsManager.tasbehatNumber,
-          style: Theme.of(context).textTheme.titleSmall,
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(fontFamily: FontsManager.elMessiri),
         ),
         const SizedBox(
           height: 34,

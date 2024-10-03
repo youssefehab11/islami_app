@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/utils/assets_manager.dart';
+import 'package:islami_app/core/utils/fonts_manager.dart';
 import 'package:islami_app/core/utils/strings_manager.dart';
 import 'package:islami_app/presentation/home/tabs/radio_tab/widgets/ezaa_controls.dart';
 
@@ -15,7 +16,7 @@ class RadioTab extends StatelessWidget {
         const SizedBox(height: 55,),
         Text(
           StringsManager.eazaaQuranKareem,
-          style: Theme.of(context).textTheme.titleSmall,
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(fontFamily: FontsManager.elMessiri),
         ),
         const EzaaControls(),
       ],

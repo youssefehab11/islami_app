@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/utils/colors_manager.dart';
+import 'package:islami_app/core/utils/fonts_manager.dart';
 
 class AppThemes {
   static final ThemeData lightTheme = ThemeData(
@@ -22,6 +23,7 @@ class AppThemes {
         color: Colors.black,
         fontSize: 30,
         fontWeight: FontWeight.bold,
+        fontFamily: FontsManager.elMessiri
       ),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -41,7 +43,8 @@ class AppThemes {
       titleMedium: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w600,
-        color: Colors.black
+        fontFamily: FontsManager.elMessiri,
+        color: Colors.black,
       ),
       titleSmall: TextStyle(
         fontSize: 25,
