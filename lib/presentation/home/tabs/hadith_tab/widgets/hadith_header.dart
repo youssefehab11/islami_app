@@ -7,6 +7,8 @@ class HadithHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TabHeader(imagePath: AssetsManager.hadithHeader);
+    return const TabHeader(
+      imagePath: AssetsManager.hadithHeader,
+    );
   }
 }
