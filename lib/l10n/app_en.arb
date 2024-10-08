@@ -1,0 +1,22 @@
+{
+    "appTitle": "Islami",
+    "surahName": "Surah Name",
+    "ayatNumbers": "Ayat Numbers",
+    "ahadithTitle": "Elahadith",
+    "tasbehatNumber": "Tasbehat Numbers",
+    "allahAkbr": "Allah Akbr",
+    "elhamdullah": "Elhamdullah",
+    "subhanAllah": "Subhan Allah",
+    "ezaaQuranKareem": "Ezaa Quran Kareem",
+    "quranIconLabel": "Quran",
+    "hadithIconLabel": "Hadith",
+    "sebhaIconLabel": "Sebha",
+    "radioIconLabel": "Radio",
+    "settingsIconLabel": "Settings",
+    "themeTitle": "Theme",
+    "lightOption": "Light",
+    "darkOption": "Dark",
+    "languageTitle": "Language",
+    "englishOption": "English",
+    "arabicOption": "العربية"
+}

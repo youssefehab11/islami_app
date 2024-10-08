@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithTableTitle extends StatelessWidget {
   const HadithTableTitle({super.key});
@@ -15,7 +16,7 @@ class HadithTableTitle extends StatelessWidget {
         ),
       ),
       child: Text(
-        'Ahadith',
+        AppLocalizations.of(context)!.ahadithTitle,
         textAlign: TextAlign.center,
         style: Theme.of(context).textTheme.titleMedium,
       ),

@@ -1,53 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:islami_app/core/router/routes.dart';
 import 'package:islami_app/core/widgets/loading.dart';
+import 'package:islami_app/presentation/home/tabs/hadith_tab/provider/hadith_provider.dart';
 import 'package:islami_app/presentation/home/tabs/hadith_tab/widgets/hadith_table_item.dart';
+import 'package:provider/provider.dart';
 
-class HadithTableBody extends StatefulWidget {
+class HadithTableBody extends StatelessWidget {
   const HadithTableBody({super.key});
-
-  @override
-  State<HadithTableBody> createState() => _HadithTableBodyState();
-}
-
-class _HadithTableBodyState extends State<HadithTableBody> {
-  List<HadithInfo> allAhadith = [];
   @override
   Widget build(BuildContext context) {
-    if (allAhadith.isEmpty) readFile();
+    HadithProvider provider = Provider.of<HadithProvider>(context);
+    if (provider.allAhadith.isEmpty) provider.readFile();
     return Expanded(
       flex: 2,
-      child: allAhadith.isEmpty
+      child: provider.allAhadith.isEmpty
           ? const Loading()
           : ListView.builder(
               itemBuilder: (context, index) => HadithTableItem(
-                allAhadith: allAhadith,
+                allAhadith: provider.allAhadith,
                 hadithIndex: index,
-                onTap: (){
-                  Navigator.pushNamed(context, Routes.hadithDetailsRoute, arguments: allAhadith[index]);
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    Routes.hadithDetailsRoute,
+                    arguments: provider.allAhadith[index],
+                  );
                 },
               ),
-              itemCount: allAhadith.length,
+              itemCount: provider.allAhadith.length,
             ),
     );
-  }
-
-  void readFile() async {
-    String fileContent =
-        await rootBundle.loadString('assets/files/hadith/ahadeth.txt');
-    List<HadithInfo> tempList = [];
-    List<String> ahadith = fileContent.trim().split('#').where((hadith) => hadith.trim().isNotEmpty).toList();
-    for (String hadith in ahadith) {
-      List<String> hadithLines = hadith.trim().split('\n');
-      String title = hadithLines[0];
-      hadithLines.removeAt(0);
-      String body = hadithLines.join('\n').trim();
-      tempList.add(HadithInfo(title: title, body: body));
-    }
-    setState(() {
-      allAhadith = tempList;
-    });
   }
 }
 

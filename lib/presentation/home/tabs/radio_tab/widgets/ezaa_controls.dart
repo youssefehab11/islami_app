@@ -10,6 +10,7 @@ class EzaaControls extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        textDirection: TextDirection.ltr,
         children: [
           ButtonControl(
             icon: Icons.skip_previous,

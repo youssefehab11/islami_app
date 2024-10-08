@@ -92,6 +92,7 @@ class AppThemes {
       titleTextStyle: TextStyle(
         color: Colors.white,
         fontSize: 30,
+        fontFamily: FontsManager.elMessiri,
         fontWeight: FontWeight.bold,
       ),
     ),
@@ -112,6 +113,7 @@ class AppThemes {
       titleMedium: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w600,
+        fontFamily: FontsManager.elMessiri,
         color: Colors.white
       ),
       titleSmall: TextStyle(
