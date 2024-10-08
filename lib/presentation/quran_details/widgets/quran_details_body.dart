@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/presentation/home/tabs/quran_tab/quran_tab.dart';
+import 'package:islami_app/presentation/quran_details/provider/quran_details_provider.dart';
 import 'package:islami_app/presentation/quran_details/widgets/tlawa_controls.dart';
 import 'package:islami_app/presentation/quran_details/widgets/tlawa_surah.dart';
+import 'package:provider/provider.dart';
 
-class QuranDetailsBody extends StatefulWidget {
+class QuranDetailsBody extends StatelessWidget {
   final SurahInfo surahInfo;
   final List<String> ayat;
   const QuranDetailsBody({
@@ -13,43 +15,22 @@ class QuranDetailsBody extends StatefulWidget {
   });
 
   @override
-  State<QuranDetailsBody> createState() => _QuranDetailsBodyState();
-}
-
-class _QuranDetailsBodyState extends State<QuranDetailsBody> {
-  int ayaIndex = 0;
-  @override
   Widget build(BuildContext context) {
+    QuranDetailsProvider provider = Provider.of<QuranDetailsProvider>(context);
     return Column(
       children: [
         TlawaSurah(
-          surahInfo: widget.surahInfo,
-          ayat: widget.ayat,
-          ayaIndex: ayaIndex,
+          surahInfo: surahInfo,
+          ayat: ayat,
+          ayaIndex: provider.ayaIndex,
         ),
         TlawaControls(
-          onNextPressed: onNextPressed,
-          onPreviousPressed: onPreviousPressed,
-          ayaIndex: ayaIndex,
-          surahInfo: widget.surahInfo,
+          onNextPressed: provider.onNextPressed,
+          onPreviousPressed: provider.onPreviousPressed,
+          ayaIndex: provider.ayaIndex,
+          surahInfo: surahInfo,
         )
       ],
     );
-  }
-
-  void onNextPressed() {
-    if (ayaIndex < int.parse(widget.surahInfo.ayatNumbers)) {
-      setState(() {
-        ayaIndex++;
-      });
-    }
-  }
-
-  void onPreviousPressed() {
-    if (ayaIndex > 0) {
-      setState(() {
-        ayaIndex--;
-      });
-    }
   }
 }

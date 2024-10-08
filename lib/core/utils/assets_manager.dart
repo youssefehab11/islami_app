@@ -13,8 +13,13 @@ class AssetsManager {
   static const String quranHeader = 'assets/images/quran_header.png';
   static const String hadithHeader = 'assets/images/hadith_header.png';
 
-  static const String sebhaHead = 'assets/images/sebha_head.png';
-  static const String sebhaBody = 'assets/images/sebha_body.png';
+  //Sebha
+  static const String sebhaHeadLight = 'assets/images/sebha_head_light.png';
+  static const String sebhaBodyLight = 'assets/images/sebha_body_light.png';
+  static const String sebhaHeadDark = 'assets/images/sebha_head_dark.png';
+  static const String sebhaBodyDark = 'assets/images/sebha_body_dark.png';
+
+  //Quran
   static const String ayaIcon = 'assets/images/aya_ic.png';
   static const String radioImage = 'assets/images/radio_image.png';
 }
