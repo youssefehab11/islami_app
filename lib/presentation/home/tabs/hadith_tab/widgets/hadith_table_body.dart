@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:islami_app/core/router/routes.dart';
 import 'package:islami_app/core/widgets/loading.dart';
 import 'package:islami_app/presentation/home/tabs/hadith_tab/provider/hadith_provider.dart';

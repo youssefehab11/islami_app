@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/utils/assets_manager.dart';
-import 'package:islami_app/presentation/home/tabs/sebha_tab/provider/sebha_provider.dart';
 import 'package:islami_app/provider/app_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -11,7 +10,7 @@ class Sebha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SebhaProvider sebhaProvider = Provider.of<SebhaProvider>(context);
+    //SebhaProvider sebhaProvider = Provider.of<SebhaProvider>(context);
     AppProvider appProvider = Provider.of<AppProvider>(context);
     return InkWell(
       overlayColor: const MaterialStatePropertyAll(Colors.transparent),
