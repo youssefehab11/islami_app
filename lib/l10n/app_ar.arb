@@ -1,0 +1,22 @@
+{
+    "appTitle": "إسلامي",
+    "surahName": "اسم السورة",
+    "ayatNumbers": "عدد الآيات",
+    "ahadithTitle": "الأحاديث",
+    "tasbehatNumber": "عدد التسبيحات",
+    "allahAkbr": "اللّه أكبر",
+    "elhamdullah": "الحمد لله",
+    "subhanAllah": "سبحان اللّه",
+    "ezaaQuranKareem": "إذاعة القرآن الكريم",
+    "quranIconLabel": "القرآن",
+    "hadithIconLabel": "الحديث",
+    "sebhaIconLabel": "السبحة",
+    "radioIconLabel": "الراديو",
+    "settingsIconLabel": "الإعدادات",
+    "themeTitle": "السمة",
+    "lightOption": "فاتح",
+    "darkOption": "داكن",
+    "languageTitle": "اللغة",
+    "englishOption": "English",
+    "arabicOption": "العربية"
+}

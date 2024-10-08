@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/core/utils/strings_manager.dart';
 import 'package:islami_app/presentation/home/tabs/quran_tab/widgets/quran_table_row_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTableTitle extends StatelessWidget {
   const QuranTableTitle({super.key});
@@ -16,9 +16,9 @@ class QuranTableTitle extends StatelessWidget {
           ),
         ),
       ),
-      child: const QuranTableRowItem(
-        surahName: StringsManager.surahName,
-        ayatNumbers: StringsManager.ayatNumbers,
+      child: QuranTableRowItem(
+        surahName: AppLocalizations.of(context)!.surahName,
+        ayatNumbers: AppLocalizations.of(context)!.ayatNumbers,
         isTitle: true,
       ),
     );

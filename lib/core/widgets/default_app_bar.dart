@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/core/utils/strings_manager.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget{
   const DefaultAppBar({super.key});
@@ -7,7 +7,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(StringsManager.appTitle),
+      title: Text(AppLocalizations.of(context)!.appTitle),
     );
   }
   
