@@ -1,5 +1,6 @@
 class AssetsManager {
   static const String splashImageLight = 'assets/images/splash_light.jpg';
+  static const String splashImageDark = 'assets/images/splash_dark.jpg';
   static const String mainBgLight = 'assets/images/main_bg_light.jpg';
   static const String mainBgDark = 'assets/images/main_bg_dark.jpg';
 
