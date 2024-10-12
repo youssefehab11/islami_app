@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:islami_app/core/utils/colors_manager.dart';
 import 'package:islami_app/core/utils/fonts_manager.dart';
 
@@ -14,9 +15,10 @@ class AppThemes {
     //useMaterial3: false,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
-      // systemOverlayStyle: SystemUiOverlayStyle(
-      //   statusBarColor: Colors.transparent
-      // ),
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark
+      ),
       shadowColor: Colors.transparent,
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -84,9 +86,10 @@ class AppThemes {
         color: Colors.white,
       ),
       backgroundColor: Colors.transparent,
-      // systemOverlayStyle: SystemUiOverlayStyle(
-      //   statusBarColor: Colors.transparent
-      // ),
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light
+      ),
       shadowColor: Colors.transparent,
       centerTitle: true,
       titleTextStyle: TextStyle(
