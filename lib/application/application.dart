@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkThem,
-      themeMode: provider.currentTheme == ThemeMode.light
-          ? ThemeMode.light
-          : ThemeMode.dark,
+      themeMode: provider.currentTheme
     );
   }
 }

@@ -5,15 +5,17 @@ class QuranTableRowItem extends StatelessWidget {
   final String ayatNumbers;
   final bool isTitle;
   final VoidCallback? onTap;
-  const QuranTableRowItem(
-      {super.key,
-      required this.surahName,
-      required this.ayatNumbers,
-      this.onTap,
-      this.isTitle = false});
+  const QuranTableRowItem({
+    super.key,
+    required this.surahName,
+    required this.ayatNumbers,
+    this.onTap,
+    this.isTitle = false,
+  });
 
   @override
   Widget build(BuildContext context) {
+    
     return IntrinsicHeight(
       child: InkWell(
         onTap: onTap != null ? () => onTap?.call() : null,
@@ -23,11 +25,13 @@ class QuranTableRowItem extends StatelessWidget {
               flex: 3,
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4.0),
-                child: Text(surahName,
-                    textAlign: TextAlign.center,
-                    style: isTitle
-                        ? Theme.of(context).textTheme.titleMedium
-                        : Theme.of(context).textTheme.titleSmall),
+                child: Text(
+                  surahName,
+                  textAlign: TextAlign.center,
+                  style: isTitle
+                      ? Theme.of(context).textTheme.titleMedium
+                      : Theme.of(context).textTheme.titleSmall,
+                ),
               ),
             ),
             Expanded(
