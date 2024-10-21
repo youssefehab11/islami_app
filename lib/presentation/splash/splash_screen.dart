@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     AppProvider provider = Provider.of<AppProvider>(context);
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, Routes.homeRoute);
+       Navigator.pushReplacementNamed(context, Routes.homeRoute);
     });
     return Container(
       decoration: BoxDecoration(
