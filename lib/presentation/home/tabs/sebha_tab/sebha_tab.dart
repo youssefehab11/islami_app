@@ -15,24 +15,32 @@ class SebhaTab extends StatelessWidget {
     AppLocalizations.of(context)!.elhamdullah,
     AppLocalizations.of(context)!.subhanAllah,
   ];
-  SebhaProvider provider = Provider.of<SebhaProvider>(context);
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Sebha(
-            onTap: provider.onSebhaClick,
-            tasbehatNumber: provider.tasbehatNumber,
-          ),
-          const SizedBox(
-            height: 41,
-          ),
-          ZekrDetails(
-            tasbehatNumber: provider.tasbehatNumber,
-            currentZekr: provider.currentZekr,
-            zekrText: zekrText,
-          )
-        ],
+
+    return ChangeNotifierProvider(
+      create: (context) => SebhaProvider(),
+      child: Consumer(
+        builder: (context, value, child) {
+          SebhaProvider provider = Provider.of<SebhaProvider>(context);
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Sebha(
+                  onTap: provider.onSebhaClick,
+                  tasbehatNumber: provider.tasbehatNumber,
+                ),
+                const SizedBox(
+                  height: 41,
+                ),
+                ZekrDetails(
+                  tasbehatNumber: provider.tasbehatNumber,
+                  currentZekr: provider.currentZekr,
+                  zekrText: zekrText,
+                )
+              ],
+            ),
+          );
+        },
       ),
     );
   }
