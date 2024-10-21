@@ -3,20 +3,23 @@ import 'package:islami_app/core/utils/assets_manager.dart';
 import 'package:islami_app/core/widgets/default_app_bar.dart';
 import 'package:islami_app/core/widgets/main_background.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami_app/presentation/home/provider/home_provider.dart';
 import 'package:islami_app/presentation/home/tabs/hadith_tab/hadith_tab.dart';
 import 'package:islami_app/presentation/home/tabs/quran_tab/quran_tab.dart';
 import 'package:islami_app/presentation/home/tabs/radio_tab/radio_tab.dart';
 import 'package:islami_app/presentation/home/tabs/sebha_tab/sebha_tab.dart';
 import 'package:islami_app/presentation/home/tabs/settings_tab/settings.dart';
-import 'package:provider/provider.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int selectedIndex = 0;
+  @override
   Widget build(BuildContext context) {
-    HomeProvider provider = Provider.of<HomeProvider>(context);
     List<Widget> tabs = [
       const QuranTab(),
       const HadithTab(),
@@ -51,12 +54,18 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
           onTap: (index) {
-            provider.changeTap(index);
+            changeTap(index);
           },
-          currentIndex: provider.selectedIndex,
+          currentIndex: selectedIndex,
         ),
-        body: tabs[provider.selectedIndex],
+        body: tabs[selectedIndex],
       ),
     );
+  }
+
+  void changeTap(int index){
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
