@@ -7,7 +7,6 @@ import 'package:islami_app/presentation/home/provider/home_provider.dart';
 import 'package:islami_app/presentation/home/tabs/hadith_tab/hadith_tab.dart';
 import 'package:islami_app/presentation/home/tabs/quran_tab/quran_tab.dart';
 import 'package:islami_app/presentation/home/tabs/radio_tab/radio_tab.dart';
-import 'package:islami_app/presentation/home/tabs/sebha_tab/provider/sebha_provider.dart';
 import 'package:islami_app/presentation/home/tabs/sebha_tab/sebha_tab.dart';
 import 'package:islami_app/presentation/home/tabs/settings_tab/settings.dart';
 import 'package:provider/provider.dart';
@@ -21,10 +20,7 @@ class HomeScreen extends StatelessWidget {
     List<Widget> tabs = [
       const QuranTab(),
       const HadithTab(),
-      ChangeNotifierProvider(
-        create: (context) => SebhaProvider(),
-        child: const SebhaTab(),
-      ),
+      const SebhaTab(),
       const RadioTab(),
       const SettingsTab(),
     ];
