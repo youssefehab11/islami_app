@@ -13,7 +13,7 @@ class Sebha extends StatelessWidget {
     //SebhaProvider sebhaProvider = Provider.of<SebhaProvider>(context);
     AppProvider appProvider = Provider.of<AppProvider>(context);
     return InkWell(
-      overlayColor: const MaterialStatePropertyAll(Colors.transparent),
+      overlayColor: const WidgetStatePropertyAll(Colors.transparent),
       onTap: () => onTap(),
       child: Stack(
         clipBehavior: Clip.none,
